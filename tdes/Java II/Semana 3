@@ -1,0 +1,176 @@
+/*
+//1
+
+
+import java.util.Scanner;
+
+public class ParesImpares {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[20];
+        int pares = 0, impares = 0;
+
+        System.out.println("Digite 20 números inteiros:");
+        for (int i = 0; i < 20; i++) {
+            numeros[i] = sc.nextInt();
+            if (numeros[i] % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+
+        System.out.println("Pares: " + pares);
+        System.out.println("Ímpares: " + impares);
+    }
+}
+*/
+
+
+//2
+/*
+import java.util.Scanner;
+
+public class BuscaNumero {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[10];
+
+        System.out.println("Digite 10 números:");
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = sc.nextInt();
+        }
+
+        System.out.print("Digite um número para buscar: ");
+        int buscado = sc.nextInt();
+
+        boolean encontrado = false;
+        for (int i = 0; i < 10; i++) {
+            if (numeros[i] == buscado) {
+                System.out.println("Número encontrado na posição: " + i);
+                encontrado = true;
+                break;
+            }
+        }
+
+        if (!encontrado) {
+            System.out.println("Número não encontrado no array.");
+        }
+    }
+}
+*/
+
+
+//3
+
+/*
+import java.util.Scanner;
+
+public class RemoverNome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] nomes = new String[10];
+
+        System.out.println("Digite 10 nomes:");
+        for (int i = 0; i < 10; i++) {
+            nomes[i] = sc.nextLine();
+        }
+
+        System.out.print("Digite o nome a ser removido: ");
+        String nomeRemover = sc.nextLine();
+
+        boolean removido = false;
+        for (int i = 0; i < 10; i++) {
+            if (nomes[i].equalsIgnoreCase(nomeRemover)) {
+                nomes[i] = "---";
+                removido = true;
+            }
+        }
+
+        if (removido) {
+            System.out.println("Nome removido. Lista atual:");
+        } else {
+            System.out.println("Nome não encontrado. Lista atual:");
+        }
+
+        for (String nome : nomes) {
+            System.out.println(nome);
+        }
+    }
+}
+*/
+
+/*
+import java.util.Scanner;
+
+public class ContarOcorrencias {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[10];
+        int[] contagem = new int[10];
+
+        System.out.println("Digite 10 números:");
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < 10; i++) {
+            contagem[i] = 1;
+            for (int j = 0; j < i; j++) {
+                if (numeros[i] == numeros[j]) {
+                    contagem[i] = 0;
+                    break;
+                }
+            }
+
+            if (contagem[i] == 1) {
+                int ocorrencias = 1;
+                for (int j = i + 1; j < 10; j++) {
+                    if (numeros[i] == numeros[j]) {
+                        ocorrencias++;
+                    }
+                }
+                System.out.println("Número " + numeros[i] + " aparece " + ocorrencias + " vez(es).");
+            }
+        }
+    }
+}
+*/
+
+//5 
+/*
+import java.util.Scanner;
+
+public class BubbleSort {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[10];
+
+        System.out.println("Digite 10 números:");
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = sc.nextInt();
+        }
+
+        // Bubble Sort
+        for (int i = 0; i < numeros.length - 1; i++) {
+            for (int j = 0; j < numeros.length - 1 - i; j++) {
+                if (numeros[j] > numeros[j + 1]) {
+                    int temp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("Array ordenado:");
+        for (int num : numeros) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+*/
+
+
+
+
